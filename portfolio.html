@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio | Advanced Media Productions</title>
+    <style>
+      :root {
+        --yellow: #ffe613;
+        --ink: #11110f;
+        --soft: #f6f4ed;
+        --muted: #6e6a5d;
+        --line: rgba(17, 17, 15, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--soft);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .wrap {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 22px 0;
+        color: #fff;
+        background: #111;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 900;
+      }
+
+      .mark {
+        width: 34px;
+        height: 34px;
+        display: grid;
+        place-items: center;
+        color: #111;
+        background: var(--yellow);
+        border-radius: 50%;
+        font-size: 13px;
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 18px;
+        border-radius: 999px;
+        color: #111;
+        background: var(--yellow);
+        font-weight: 900;
+      }
+
+      .intro {
+        padding: 74px 0 34px;
+      }
+
+      h1 {
+        max-width: 780px;
+        margin: 0 0 16px;
+        font-size: clamp(44px, 7vw, 88px);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      p {
+        max-width: 620px;
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .filters span {
+        display: inline-flex;
+        min-height: 38px;
+        align-items: center;
+        padding: 0 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--muted);
+        background: #fff;
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .filters span:first-child {
+        color: #111;
+        background: var(--yellow);
+        border-color: var(--yellow);
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        padding: 26px 0 86px;
+      }
+
+      .tile {
+        position: relative;
+        min-height: 270px;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .tile.large {
+        grid-column: span 2;
+        min-height: 410px;
+      }
+
+      .tile::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.04) 62%);
+      }
+
+      .tile-caption {
+        position: absolute;
+        z-index: 1;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        color: #fff;
+      }
+
+      .tile-caption span {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--yellow);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .tile-caption strong {
+        font-size: 20px;
+      }
+
+      footer {
+        padding: 34px 0;
+        color: rgba(255, 255, 255, 0.65);
+        background: #111;
+      }
+
+      @media (max-width: 780px) {
+        nav {
+          display: grid;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+        }
+
+        .tile.large {
+          grid-column: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="wrap" aria-label="Portfolio navigation">
+        <a class="brand" href="real-estate-media.html">
+          <span class="mark">AMP</span>
+          <span>Advanced Media Productions</span>
+        </a>
+        <a class="button" href="https://your-booking-website.com" target="_blank" rel="noopener">Book Now</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro wrap">
+        <h1>Real estate media portfolio.</h1>
+        <p>This gallery is ready for your finished listing photos. Replace the placeholder images in this page with your own portfolio files as they are added to the assets folder.</p>
+        <div class="filters" aria-label="Portfolio filters">
+          <span>All</span>
+          <span>Video</span>
+          <span>Photo</span>
+          <span>Social Media</span>
+        </div>
+      </section>
+
+      <section class="gallery wrap" aria-label="Portfolio gallery">
+        <div class="tile large">
+          <img src="assets/real-estate-hero.png" alt="Featured real estate interior portfolio image">
+          <div class="tile-caption"><span>Real Estate</span><strong>Luxury Listing Showcase</strong></div>
+        </div>
+        <div class="tile">
+          <img src="assets/real-estate-hero.png" alt="Real estate photography portfolio image">
+          <div class="tile-caption"><span>Photo</span><strong>Open-Concept Living Room</strong></div>
+        </div>
+        <div class="tile">
+          <img src="assets/real-estate-hero.png" alt="Home listing media portfolio image">
+          <div class="tile-caption"><span>Video</span><strong>Modern Home Walkthrough</strong></div>
+        </div>
+        <div class="tile">
+          <img src="assets/real-estate-hero.png" alt="Architectural photography portfolio image">
+          <div class="tile-caption"><span>Detail</span><strong>Kitchen Detail &amp; Backsplash</strong></div>
+        </div>
+        <div class="tile large">
+          <img src="assets/real-estate-hero.png" alt="Luxury listing photography portfolio image">
+          <div class="tile-caption"><span>Social Media</span><strong>Listing Highlight Reel</strong></div>
+        </div>
+        <div class="tile">
+          <img src="assets/real-estate-hero.png" alt="Property media portfolio image">
+          <div class="tile-caption"><span>Real Estate</span><strong>Property Cinematic Tour</strong></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">Advanced Media Productions | contact@advancedmedia-productions.com</div>
+    </footer>
+  </body>
+</html>
