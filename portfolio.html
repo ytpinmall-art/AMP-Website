@@ -57,19 +57,16 @@
       .brand {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         font-weight: 900;
       }
 
-      .mark {
-        width: 34px;
-        height: 34px;
-        display: grid;
-        place-items: center;
-        color: #111;
-        background: var(--yellow);
-        border-radius: 50%;
-        font-size: 13px;
+      .brand-logo {
+        width: 122px;
+        height: 42px;
+        display: block;
+        object-fit: contain;
+        filter: invert(1);
       }
 
       .button {
@@ -190,6 +187,11 @@
           display: grid;
         }
 
+        .brand-logo {
+          width: 104px;
+          height: 36px;
+        }
+
         .gallery {
           grid-template-columns: 1fr;
         }
@@ -204,7 +206,7 @@
     <header>
       <nav class="wrap" aria-label="Portfolio navigation">
         <a class="brand" href="real-estate-media.html">
-          <span class="mark">AMP</span>
+          <img class="brand-logo" src="assets/amp-rem-logo.png" alt="AMP Real Estate Media">
           <span>Advanced Media Productions</span>
         </a>
         <a class="button" href="https://your-booking-website.com" target="_blank" rel="noopener">Book Now</a>

@@ -64,23 +64,19 @@
       .brand {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
         min-width: 0;
         font-weight: 800;
         letter-spacing: 0;
       }
 
-      .mark {
-        width: 34px;
-        height: 34px;
-        display: grid;
-        place-items: center;
+      .brand-logo {
+        width: 118px;
+        height: 40px;
+        display: block;
         flex: 0 0 auto;
-        color: #111;
-        background: var(--yellow);
-        border-radius: 50%;
-        font-size: 13px;
-        font-weight: 900;
+        object-fit: contain;
+        filter: invert(1);
       }
 
       .nav {
@@ -691,10 +687,15 @@
           display: none;
         }
 
-        .brand span:last-child {
+        .brand-name {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
+        }
+
+        .brand-logo {
+          width: 96px;
+          height: 34px;
         }
 
         .hero {
@@ -732,8 +733,8 @@
   <body>
     <header class="topbar" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Advanced Media Productions home">
-        <span class="mark">AMP</span>
-        <span>Advanced Media Productions</span>
+        <img class="brand-logo" src="assets/amp-rem-logo.png" alt="AMP Real Estate Media">
+        <span class="brand-name">Advanced Media Productions</span>
       </a>
       <nav class="nav" aria-label="Site sections">
         <a href="#services">Services</a>
